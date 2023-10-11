@@ -45,7 +45,7 @@ opSection.addEventListener("click", (e) => {
     if(operator && input1 && input2) {
         // store the result and combine with the operator input and display it 
         screenStr = calculate(input1, input2, operator)
-        input1 = screenStr;
+        input1 = screenStr.toString();
         input2 = "";
         operator = e.target.dataset.operator;
         screenStr = screenStr + e.target.dataset.operator
@@ -87,7 +87,7 @@ equalToBtn.addEventListener("click", (e) => {
     if(input1 && input2 ) {
         // replace the screenStr value with the result and display it 
         screenStr = calculate(input1,input2, operator)
-        input1 = screenStr;
+        input1 = screenStr.toString();
         input2 = "";
         operator = "";
         display(screenStr)
@@ -97,14 +97,17 @@ equalToBtn.addEventListener("click", (e) => {
 
 
 
-// function to display on screen 
+// // function to display on screen 
 function display(str) {
-    screen.textContent = str;
+    screen.textContent = str || "0";
 }
 
-// clear functionality 
+// // clear functionality 
 
 clearBtn.addEventListener("click", (e) => {
+
+    // convert the screen to string if it was a number 
+    screenStr = screenStr.toString()
     if(!input1) return;
 
     if(input2) {
@@ -124,6 +127,7 @@ clearBtn.addEventListener("click", (e) => {
     }
 
     if(input1) {
+        // the problem is that input1 is a number
         input1 = input1.substring(0, input1.length - 1)
         // updating and displaying screen str 
         screenStr = screenStr.substring(0, screenStr.length - 1)

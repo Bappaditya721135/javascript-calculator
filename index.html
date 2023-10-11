@@ -5,24 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            min-width: 100%;
-            min-height: 100%;
-            background-color: black;
-        }
-
-        .screen-section {
-            width: 200px;
-            height: 100px;
-            background-color: gray;
-            font-size: 1.2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <h3>calculator</h3>
+    <h3 class="text">javascript calculator</h3>
 
     <div class="calculator-body">
         <!-- calculator screen  -->
@@ -32,14 +19,6 @@
 
         <!-- calculator button section  -->
         <section class="btn-section">
-            <!-- operator section  -->
-            <section class="operator-section">
-                <button class="operator-btn add-btn" data-operator="+">+</button>
-                <button class="oprator-btn sub-btn" data-operator="-">-</button>
-                <button class="oprator-btn mod-btn" data-operator="%">%</button>
-                <button class="oprator-btn mul-btn" data-operator="*">*</button>
-                <button class="oprator-btn div-btn" data-operator="/">/</button>
-            </section>
 
 
             <!-- number section  -->
@@ -53,8 +32,24 @@
                 <button class="number-btn seven-btn" data-number="7">7</button>
                 <button class="number-btn eight-btn" data-number="8">8</button>
                 <button class="number-btn nine-btn" data-number="9">9</button>
-                <button class="number-btn zero-btn" data-number="0">0</button>
                 <button class="number-btn dot-btn" data-number=".">.</button>
+                <button class="number-btn zero-btn" data-number="0">0</button>
+            </section>
+
+            <!-- operator section  -->
+            <section class="operator-section">
+                <button class="operator-btn add-btn" data-operator="+">+</button>
+                <button class="operator-btn sub-btn" data-operator="-">-</button>
+                <button class="operator-btn mod-btn" data-operator="%">%</button>
+                <button class="operator-btn mul-btn" data-operator="*">*</button>
+                <button class="operator-btn div-btn" data-operator="/">/</button>
+            </section>
+
+
+
+            <!-- equal button section  -->
+            <section class="equalTo-section">
+                <button class="equalTo-btn">=</button>
             </section>
 
             <!-- clear section  -->
@@ -63,10 +58,8 @@
             </section>
 
 
-            <!-- equal button section  -->
-            <section class="equalTo-section">
-                <button class="equalTo-btn">=</button>
-            </section>
+
+        </section>
         </section>
     </div>
 </body>
